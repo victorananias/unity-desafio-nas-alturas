@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class AviaoController : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
+    private Rigidbody2D rigidbody;
+    [SerializeField]
+    private float forca = 10;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -22,6 +24,6 @@ public class AviaoController : MonoBehaviour
 
     private void Impulsionar()
     {
-        _rigidbody.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+        rigidbody.AddForce(Vector2.up * forca, ForceMode2D.Impulse);
     }
 }
