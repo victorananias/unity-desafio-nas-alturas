@@ -5,16 +5,23 @@ using UnityEngine;
 
 public class AviaoController : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
     [SerializeField]
     private float forca = 10;
+    
+    private Rigidbody2D rigidbody;
+    private GerenciadorJogoController gerenciadorJogo;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Start()
+    {
+        gerenciadorJogo = FindObjectOfType<GerenciadorJogoController>();
+    }
+
+    private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -26,5 +33,16 @@ public class AviaoController : MonoBehaviour
     {
         rigidbody.velocity = Vector2.zero;
         rigidbody.AddForce(Vector2.up * forca, ForceMode2D.Impulse);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        gerenciadorJogo.FinalizarJogo();
+        PararFisica();
+    }
+
+    private void PararFisica()
+    {
+        rigidbody.simulated = false;
     }
 }
