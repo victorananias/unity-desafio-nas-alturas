@@ -10,10 +10,18 @@ public class AviaoController : MonoBehaviour
     
     private Rigidbody2D rigidbody;
     private GerenciadorJogoController gerenciadorJogo;
+    private Vector3 posicaoInicial;
+
+    public void Reiniciar()
+    {
+        AtivarFisica();
+        transform.position = posicaoInicial;
+    }
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        posicaoInicial = transform.position;
     }
 
     private void Start()
@@ -44,5 +52,10 @@ public class AviaoController : MonoBehaviour
     private void PararFisica()
     {
         rigidbody.simulated = false;
+    }
+
+    private void AtivarFisica()
+    {
+        rigidbody.simulated = true;
     }
 }

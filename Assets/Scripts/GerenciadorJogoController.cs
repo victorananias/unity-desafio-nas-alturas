@@ -5,10 +5,23 @@ using UnityEngine;
 public class GerenciadorJogoController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject imagemGameOver;
+    private GameObject gameOver;
+    private AviaoController jogador;
     public void FinalizarJogo()
     {
         Time.timeScale = 0;
-        imagemGameOver.SetActive(true);
+        gameOver.SetActive(true);
+    }
+
+    public void ReiniciarJogo()
+    {
+        Time.timeScale = 1;
+        gameOver.SetActive(false);
+        jogador.Reiniciar();
+    }
+
+    public void Start()
+    {
+        jogador = GameObject.FindGameObjectWithTag("Jogador").GetComponent<AviaoController>();
     }
 }
