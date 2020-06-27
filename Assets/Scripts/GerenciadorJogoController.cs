@@ -7,6 +7,7 @@ public class GerenciadorJogoController : MonoBehaviour
     [SerializeField]
     private GameObject gameOver;
     private AviaoController jogador;
+
     public void FinalizarJogo()
     {
         Time.timeScale = 0;
@@ -18,10 +19,21 @@ public class GerenciadorJogoController : MonoBehaviour
         Time.timeScale = 1;
         gameOver.SetActive(false);
         jogador.Reiniciar();
+        DestruirObstaculos();
     }
 
-    public void Start()
+    private void Start()
     {
         jogador = GameObject.FindGameObjectWithTag("Jogador").GetComponent<AviaoController>();
+    }
+
+    private void DestruirObstaculos()
+    {
+        ObstaculoController[] obstaculos = FindObjectsOfType<ObstaculoController>();
+
+        foreach(var obstaculo in obstaculos)
+        {
+            obstaculo.Destruir();
+        }
     }
 }

@@ -29,7 +29,7 @@ public class ObstaculoController : MonoBehaviour
         transform.Translate(Vector3.left * (velocidade * Time.deltaTime));
     }
 
-    private void Destruir()
+    public void Destruir()
     {
         Destroy(gameObject);
     }

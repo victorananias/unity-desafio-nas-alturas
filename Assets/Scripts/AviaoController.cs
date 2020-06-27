@@ -14,8 +14,8 @@ public class AviaoController : MonoBehaviour
 
     public void Reiniciar()
     {
-        AtivarFisica();
         transform.position = posicaoInicial;
+        AtivarFisica();
     }
 
     private void Awake()
@@ -26,7 +26,7 @@ public class AviaoController : MonoBehaviour
 
     private void Start()
     {
-        gerenciadorJogo = FindObjectOfType<GerenciadorJogoController>();
+        gerenciadorJogo = GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorJogoController>();
     }
 
     private void Update()
