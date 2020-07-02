@@ -7,6 +7,7 @@ public class GerenciadorJogoController : MonoBehaviour
     [SerializeField]
     private GameObject gameOver;
     private AviaoController jogador;
+    private PontuacaoController pontuacao;
 
     public void FinalizarJogo()
     {
@@ -19,12 +20,14 @@ public class GerenciadorJogoController : MonoBehaviour
         Time.timeScale = 1;
         gameOver.SetActive(false);
         jogador.Reiniciar();
+        pontuacao.Reiniciar();
         DestruirObstaculos();
     }
 
     private void Start()
     {
         jogador = GameObject.FindGameObjectWithTag("Jogador").GetComponent<AviaoController>();
+        pontuacao = GameObject.FindGameObjectWithTag("Pontuacao").GetComponent<PontuacaoController>();
     }
 
     private void DestruirObstaculos()

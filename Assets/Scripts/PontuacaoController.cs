@@ -1,18 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PontuacaoController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Text textPontuacao;
+    private int pontos;
+
+
+    public void AdicionarPontos()
     {
-        
+        pontos++;
+        AtualizarTexto();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Reiniciar()
     {
-        
+        pontos = 0;
+        AtualizarTexto();
+    }
+
+    private void AtualizarTexto()
+    {
+        textPontuacao.text = pontos.ToString("D4");
     }
 }

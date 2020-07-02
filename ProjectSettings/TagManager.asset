@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Jogador
   - GameOver
+  - Pontuacao
   layers:
   - Default
   - TransparentFX

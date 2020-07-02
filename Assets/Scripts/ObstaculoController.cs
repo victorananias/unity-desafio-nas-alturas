@@ -4,19 +4,35 @@ using Random = UnityEngine.Random;
 
 public class ObstaculoController : MonoBehaviour
 {
-    [SerializeField] private float velocidade = 5f;
+    [SerializeField]
+    private float velocidade = 5f;
+    [SerializeField]
+    private float variacaoY;
+    private Vector3 positionAviao;
+    private PontuacaoController pontuacao;
+    private bool pontuou = false;
 
-    [SerializeField] private float variacaoY;
+    public void Destruir()
+    {
+        Destroy(gameObject);
+    }
 
     private void Awake()
     {
         transform.Translate(Vector3.up * Random.Range(-variacaoY, variacaoY));
     }
 
+    private void Start()
+    {
+        positionAviao = GameObject.FindGameObjectWithTag("Jogador").transform.position;
+        pontuacao = GameObject.FindGameObjectWithTag("Pontuacao").GetComponent<PontuacaoController>();
+    }
+
     // Update is called once per frame
     private void Update()
     {
         Mover();
+        VerificarPonto();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -29,8 +45,12 @@ public class ObstaculoController : MonoBehaviour
         transform.Translate(Vector3.left * (velocidade * Time.deltaTime));
     }
 
-    public void Destruir()
+    private void VerificarPonto()
     {
-        Destroy(gameObject);
+        if (!pontuou && transform.position.x < positionAviao.x)
+        {
+            pontuou = true;
+            pontuacao.AdicionarPontos();
+        }
     }
 }
