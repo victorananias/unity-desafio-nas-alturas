@@ -2,14 +2,14 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ObstaculoController : MonoBehaviour
+public class Obstaculo : MonoBehaviour
 {
     [SerializeField]
     private float velocidade = 5f;
     [SerializeField]
     private float variacaoY;
     private Vector3 positionAviao;
-    private PontuacaoController pontuacao;
+    private Pontuacao pontuacao;
     private bool pontuou = false;
 
     public void Destruir()
@@ -25,7 +25,7 @@ public class ObstaculoController : MonoBehaviour
     private void Start()
     {
         positionAviao = GameObject.FindGameObjectWithTag("Jogador").transform.position;
-        pontuacao = GameObject.FindGameObjectWithTag("Pontuacao").GetComponent<PontuacaoController>();
+        pontuacao = GameObject.FindGameObjectWithTag("Pontuacao").GetComponent<Pontuacao>();
     }
 
     // Update is called once per frame

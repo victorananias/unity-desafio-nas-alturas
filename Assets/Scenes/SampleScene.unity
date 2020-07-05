@@ -291,7 +291,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 136776695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ad35480e93a5649b14ed30e8598557, type: 3}
+  m_Script: {fileID: 11500000, guid: 75ba38f18a07880489578aae1ab68017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 113689386}
@@ -386,10 +386,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 176898987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6431cdba6f1ec4c42baaef1bb7f371cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ce3ec0af46f61f419dac0b4cfb609ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 2.5
+  velocidade: 3
 --- !u!1 &260530784
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,10 +418,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 260530784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6431cdba6f1ec4c42baaef1bb7f371cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ce3ec0af46f61f419dac0b4cfb609ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
+  velocidade: 4.5
 --- !u!60 &260530786
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.824807, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.8260877, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -726,10 +726,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 472152414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77bf3986c7e6624fabc13a887e6d1b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 339c66f78097bcb4ea2fb23ea2c50b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoParaGerarObstaculo: 2
+  tempoParaGerarObstaculo: 3
   obstaculo: {fileID: 8181181151950902769, guid: d18df1eda72a4bd48a4efa73d66060f7,
     type: 3}
 --- !u!1 &519420028
@@ -942,10 +942,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 871634712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6431cdba6f1ec4c42baaef1bb7f371cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ce3ec0af46f61f419dac0b4cfb609ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 2.5
+  velocidade: 3
 --- !u!212 &871634714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1108733337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2133b9481fcc65447b1610fc96f07858, type: 3}
+  m_Script: {fileID: 11500000, guid: 6814a0bd741ded44dbc754b59e3afcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   forca: 5
@@ -1494,10 +1494,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481256784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6431cdba6f1ec4c42baaef1bb7f371cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ce3ec0af46f61f419dac0b4cfb609ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
+  velocidade: 4.5
 --- !u!60 &1481256788
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1563,8 +1563,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046440207}
-  - component: {fileID: 2046440206}
   - component: {fileID: 2046440208}
+  - component: {fileID: 2046440206}
   m_Layer: 0
   m_Name: Pontuacao
   m_TagString: Pontuacao
@@ -1581,7 +1581,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2046440205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88649dda670f4fe40b44a94a97625da5, type: 3}
+  m_Script: {fileID: 11500000, guid: b48d187e45f964744b763630fc68e098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPontuacao: {fileID: 367875888}

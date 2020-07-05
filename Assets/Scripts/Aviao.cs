@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AviaoController : MonoBehaviour
+public class Aviao : MonoBehaviour
 {
     [SerializeField]
     private float forca = 10;
     
     private Rigidbody2D rigidbody;
-    private GerenciadorJogoController gerenciadorJogo;
+    private GerenciadorJogo gerenciadorJogo;
     private Vector3 posicaoInicial;
 
     public void Reiniciar()
@@ -26,7 +26,7 @@ public class AviaoController : MonoBehaviour
 
     private void Start()
     {
-        gerenciadorJogo = GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorJogoController>();
+        gerenciadorJogo = GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorJogo>();
     }
 
     private void Update()

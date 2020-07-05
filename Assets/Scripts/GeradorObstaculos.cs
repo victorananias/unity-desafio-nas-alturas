@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeradorObstaculosController : MonoBehaviour
+public class GeradorObstaculos : MonoBehaviour
 {
     [SerializeField]
     private float tempoParaGerarObstaculo;

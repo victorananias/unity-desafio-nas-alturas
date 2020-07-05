@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GerenciadorJogoController : MonoBehaviour
+public class GerenciadorJogo : MonoBehaviour
 {
     [SerializeField]
     private GameObject gameOver;
-    private AviaoController jogador;
-    private PontuacaoController pontuacao;
+    private Aviao jogador;
+    private Pontuacao pontuacao;
 
     public void FinalizarJogo()
     {
@@ -26,13 +26,13 @@ public class GerenciadorJogoController : MonoBehaviour
 
     private void Start()
     {
-        jogador = GameObject.FindGameObjectWithTag("Jogador").GetComponent<AviaoController>();
-        pontuacao = GameObject.FindGameObjectWithTag("Pontuacao").GetComponent<PontuacaoController>();
+        jogador = GameObject.FindGameObjectWithTag("Jogador").GetComponent<Aviao>();
+        pontuacao = GameObject.FindGameObjectWithTag("Pontuacao").GetComponent<Pontuacao>();
     }
 
     private void DestruirObstaculos()
     {
-        ObstaculoController[] obstaculos = FindObjectsOfType<ObstaculoController>();
+        Obstaculo[] obstaculos = FindObjectsOfType<Obstaculo>();
 
         foreach(var obstaculo in obstaculos)
         {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PontuacaoController : MonoBehaviour
+public class Pontuacao : MonoBehaviour
 {
     [SerializeField]
     private Text textPontuacao;
